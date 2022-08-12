@@ -1,0 +1,18 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.devnet]
+unsafe_password = "GLzhrRJbiwiWUxRmFvS8x3C8aun5J3EEXX568YxqFMM5"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/mateo/.config/solana/id.json"
+
+[scripts]
+create = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/CreatePasswordHold.ts"
+check = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/CheckIt.ts"
+delete = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/Delete.ts"
+modify = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/Modify.ts"
